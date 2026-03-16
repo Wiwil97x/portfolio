@@ -1,612 +1,259 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <base target="_self" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Willem MARCHETY-CONCY | Développeur Web</title>
-    <meta
-      name="description"
-      content="Portfolio d'un étudiant en développement web à la recherche d'une alternance"
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body class="bg-darker text-light">
-    <!-- En-tête -->
-    <header class="fixed w-full bg-darker/90 backdrop-blur-lg z-50 border-b border-gray-800">
-      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="text-xl font-bold text-accent">Willem MARCHETY-CONCY</a>
-        <nav>
-          <ul class="hidden md:flex space-x-8">
-            <li><a href="#about" class="nav-link relative py-2 px-1">À propos</a></li>
-            <li><a href="#projects" class="nav-link relative py-2 px-1">Projets</a></li>
-            <li><a href="#skills" class="nav-link relative py-2 px-1">Compétences</a></li>
-            <li><a href="#contact" class="nav-link relative py-2 px-1">Contact</a></li>
-          </ul>
-          <button class="md:hidden text-xl text-light">
-            <i class="fas fa-bars"></i>
-          </button>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Firstname] [Lastname] — Développeur Web &amp; Designer</title>
+  <meta name="description" content="Portfolio de [Firstname] [Lastname], développeur web et designer en recherche d'alternance à Paris à partir de septembre 2026.">
 
-    <!-- Section Hero -->
-    <section class="min-h-screen flex items-center relative overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <div
-          class="absolute top-1/4 left-1/4 w-64 h-64 bg-accent rounded-full filter blur-[100px] opacity-10 animate-float"
-        ></div>
-        <div
-          class="absolute bottom-1/3 right-1/4 w-48 h-48 bg-accent rounded-full filter blur-[80px] opacity-05 animate-float"
-          style="animation-delay: 1s"
-        ></div>
-      </div>
+  <!-- Open Graph -->
+  <meta property="og:title" content="[Firstname] [Lastname] — Développeur Web &amp; Designer">
+  <meta property="og:description" content="Portfolio de [Firstname] [Lastname], développeur web et designer en recherche d'alternance à Paris.">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta property="og:url" content="https://[your-domain]/">
+  <meta property="og:type" content="website">
 
-      <div class="container mx-auto px-6 py-20 text-center relative z-10">
-        <h1
-          class="text-5xl md:text-7xl font-extrabold mb-6 animate-slide-up"
-          style="animation-delay: 0.1s"
-        >
-          <span class="text-light">Willem MARCHETY-CONCY</span>
-        </h1>
-        <h2
-          class="text-2xl md:text-3xl text-gray-400 font-light mb-8 animate-slide-up"
-          style="animation-delay: 0.3s"
-        >
-          Développeur Web Junior
-        </h2>
-        <p
-          class="max-w-2xl mx-auto text-lg text-gray-400 mb-12 animate-slide-up"
-          style="animation-delay: 0.5s"
-        >
-          Création de solutions numériques élégantes et performantes. Passionné par l'innovation
-          technique et la qualité d'exécution.
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">FL</a>
+      <div class="nav-links" id="nav-links">
+        <a href="#projets" class="nav-link">Projets</a>
+        <a href="#about" class="nav-link">À propos</a>
+        <a href="#competences" class="nav-link">Compétences</a>
+        <a href="#contact" class="nav-link nav-link--cta">Contact</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ── Hero ───────────────────────────────────────────── -->
+    <section class="hero" id="hero">
+      <div class="hero-inner container">
+        <div class="hero-content">
+          <!-- Mobile circular crop (visible only on mobile via CSS) -->
+          <img
+            src="assets/photo.jpg"
+            alt="[Firstname] [Lastname]"
+            class="hero-photo-mobile"
+          >
+          <p class="hero-tag">DISPONIBLE EN ALTERNANCE · SEP. 2026 · PARIS</p>
+          <h1 class="hero-name">[Firstname]<br>[Lastname]</h1>
+          <p class="hero-subtitle">Développeur Web &amp; Designer</p>
+          <div class="hero-ctas">
+            <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+            <a href="#contact" class="btn btn-outline">Me contacter</a>
+          </div>
+        </div>
+        <div class="hero-photo-col">
+          <img
+            src="assets/photo.jpg"
+            alt="[Firstname] [Lastname]"
+            class="hero-photo"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Projects ───────────────────────────────────────── -->
+    <section class="section projects" id="projets">
+      <div class="container">
+        <span class="section-label">PROJETS</span>
+        <h2 class="section-heading">Ce que j'ai construit</h2>
+
+        <div class="projects-grid">
+
+          <a href="projects/bns-transport.html" class="project-card">
+            <img
+              src="assets/projects/bns-transport/cover.jpg"
+              alt="Aperçu du projet BNS Transport"
+              class="project-card-cover"
+            >
+            <div class="project-card-body">
+              <span class="project-label project-label--client">CLIENT RÉEL</span>
+              <h3 class="project-name">BNS Transport</h3>
+              <p class="project-desc">Site vitrine pour une entreprise de transport</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="projects/pizza-italia.html" class="project-card">
+            <img
+              src="assets/projects/pizza-italia/cover.jpg"
+              alt="Aperçu du projet Pizza Italia"
+              class="project-card-cover"
+            >
+            <div class="project-card-body">
+              <span class="project-label project-label--client">CLIENT RÉEL</span>
+              <h3 class="project-name">Pizza Italia</h3>
+              <p class="project-desc">Site web pour un restaurant local</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="projects/roven.html" class="project-card">
+            <img
+              src="assets/projects/roven/cover.jpg"
+              alt="Aperçu du projet Roven"
+              class="project-card-cover"
+            >
+            <div class="project-card-body">
+              <span class="project-label project-label--perso">PROJET PERSONNEL</span>
+              <h3 class="project-name">Roven</h3>
+              <p class="project-desc">Design UI — site vitrine fictif</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="projects/nova-strategie.html" class="project-card">
+            <img
+              src="assets/projects/nova-strategie/cover.jpg"
+              alt="Aperçu du projet Nova Stratégie"
+              class="project-card-cover"
+            >
+            <div class="project-card-body">
+              <span class="project-label project-label--perso">PROJET PERSONNEL</span>
+              <h3 class="project-name">Nova Stratégie</h3>
+              <p class="project-desc">Design UI — agence digitale fictive</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="projects/flowly.html" class="project-card project-card--last">
+            <img
+              src="assets/projects/flowly/cover.jpg"
+              alt="Aperçu du projet Flowly"
+              class="project-card-cover"
+            >
+            <div class="project-card-body">
+              <span class="project-label project-label--perso">PROJET PERSONNEL</span>
+              <h3 class="project-name">Flowly</h3>
+              <p class="project-desc">Design UI — application SaaS fictive</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About + Skills ─────────────────────────────────── -->
+    <section class="section about-skills" id="about">
+      <div class="container about-skills-inner">
+
+        <!-- Left: About -->
+        <div class="about">
+          <span class="section-label">À PROPOS</span>
+          <h2 class="section-heading">Qui suis-je ?</h2>
+          <p class="about-text">
+            [Écrire 2-3 phrases sur votre parcours et votre passion pour le web.]
+          </p>
+          <p class="about-text">
+            [Écrire une phrase sur votre double approche dev et design.]
+          </p>
+          <p class="about-text">
+            [Écrire une phrase sur votre recherche d'alternance à Paris à partir de septembre 2026.]
+          </p>
+        </div>
+
+        <!-- Right: Skills -->
+        <div class="skills" id="competences">
+          <span class="section-label">COMPÉTENCES</span>
+
+          <div class="skill-group">
+            <span class="skill-group-label">Front-end</span>
+            <div class="tags">
+              <span class="tag">HTML / CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">React</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <span class="skill-group-label">Back-end</span>
+            <div class="tags">
+              <span class="tag">PHP</span>
+              <span class="tag">Node.js</span><span class="tag-notions">notions</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <span class="skill-group-label">Outils</span>
+            <div class="tags">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">VSCode</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Contact ────────────────────────────────────────── -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner">
+        <span class="section-label">CONTACT</span>
+        <h2 class="contact-heading">Travaillons ensemble</h2>
+        <p class="contact-sub">
+          Disponible en alternance à partir de septembre 2026 · Paris et région parisienne
         </p>
-        <a
-          href="#projects"
-          class="btn-accent inline-block bg-accent text-darker px-10 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 animate-slide-up"
-          style="animation-delay: 0.7s"
-        >
-          Découvrir mes projets
-          <i class="fas fa-arrow-right ml-2"></i>
+        <a href="mailto:[email]" class="btn btn-primary contact-cta">
+          M'envoyer un email
         </a>
-      </div>
-    </section>
-
-    <!-- Section À propos -->
-    <section id="about" class="py-28 section">
-      <div class="container mx-auto px-6 max-w-5xl">
-        <div class="flex flex-col md:flex-row gap-16 items-center">
-          <div class="md:w-2/5 relative">
-            <div class="relative rounded-2xl overflow-hidden">
-              <img
-                src="assets/img/costard.jpg"
-                alt="Willem MARCHETY-CONCY"
-                class="w-full h-auto rounded-2xl"
-                loading="lazy"
-              />
-              <div
-                class="absolute inset-0 border border-gray-700 rounded-2xl transform rotate-3 -z-10"
-              ></div>
-            </div>
-          </div>
-
-          <div class="md:w-3/5">
-            <h2 class="text-3xl font-bold mb-6 text-light">
-              <span class="text-accent">//</span> À propos de moi
-            </h2>
-
-            <div class="space-y-6 text-gray-400">
-              <p class="text-lg leading-relaxed">
-                Étudiant en développement web, je m’intéresse particulièrement à la création
-                d’interfaces modernes, claires et fonctionnelles, avec une attention portée à
-                l’expérience utilisateur et à la lisibilité du code.
-              </p>
-
-              <p class="text-lg leading-relaxed">
-                Mon parcours s’est construit autour de projets personnels et concrets, me permettant
-                de comprendre les bases du développement front-end et back-end, d’adapter des
-                solutions existantes et de livrer des sites cohérents et utilisables.
-              </p>
-
-              <p class="text-lg leading-relaxed">
-                J’utilise aujourd’hui des outils modernes, y compris des solutions assistées par IA,
-                que je considère comme des accélérateurs de production. Grâce à mes bases en HTML,
-                CSS et JavaScript, je suis capable de comprendre, modifier et personnaliser les
-                projets générés afin de les adapter aux besoins réels.
-              </p>
-
-              <p class="text-lg leading-relaxed">
-                Actuellement à la recherche d’une alternance, je souhaite continuer à progresser
-                dans un environnement professionnel, consolider mes compétences techniques et gagner
-                en autonomie sur des projets réels.
-              </p>
-            </div>
-
-            <div class="mt-10 flex flex-wrap gap-4">
-              <div class="bg-gray-900/20 border border-gray-800 rounded-xl px-6 py-4">
-                <div class="text-accent text-2xl font-bold">6+</div>
-                <div class="text-gray-400">Projets réalisés</div>
-              </div>
-              <div class="bg-gray-900/20 border border-gray-800 rounded-xl px-6 py-4">
-                <div class="text-accent text-2xl font-bold">Dev</div>
-                <div class="text-gray-400">Web</div>
-              </div>
-              <div class="bg-gray-900/20 border border-gray-800 rounded-xl px-6 py-4">
-                <div class="text-accent text-2xl font-bold">2026-2027</div>
-                <div class="text-gray-400">Alternance</div>
-              </div>
-            </div>
-          </div>
+        <div class="contact-links">
+          <a href="[github-url]" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+          <a href="[linkedin-url]" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
         </div>
       </div>
     </section>
 
-    <!-- Section Projets -->
-    <section id="projects" class="py-28 bg-darker section">
-      <div class="container mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto mb-20">
-          <h2 class="text-3xl font-bold mb-4 text-light">
-            <span class="text-accent">//</span> Projets récents
-          </h2>
-          <p class="text-lg text-gray-400">
-            Des réalisations concrètes mettant en œuvre des solutions techniques innovantes et
-            élégantes
-          </p>
-        </div>
+  </main><!-- end main -->
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <!-- Projet 1 -->
-          <a
-            href="pages/roven.html"
-            target="_blank"
-            class="project-card block rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-black card-hover"
-          >
-            <div class="relative h-80">
-              <img
-                src="assets/img/roven.png"
-                alt="Plateforme de réservation"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-copy">© 2026 [Firstname] [Lastname]</span>
+      <span class="footer-tech">Fait avec HTML / CSS / JS</span>
+    </div>
+  </footer>
 
-              <!-- IMPORTANT : l’overlay ne doit pas bloquer le clic -->
-              <div class="image-overlay pointer-events-none"></div>
-
-              <div class="absolute bottom-6 left-6 right-6 z-10">
-                <div class="flex justify-between items-end">
-                  <div>
-                    <h3 class="text-xl font-bold text-light">Projet personnels - ROVEN</h3>
-                    <p class="text-gray-300">
-                      Création de sites vitrines modernes orientés clarté et conversion
-                    </p>
-                  </div>
-
-                  <div class="text-accent text-3xl">
-                    <i class="fas fa-external-link-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="p-6">
-              <p class="text-gray-400 mb-4">
-                Solution complète de réservation en ligne avec calendrier interactif, gestion des
-                disponibilités en temps réel et système de paiement sécurisé.
-              </p>
-
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >HTML</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >CSS</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >JavaScript</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >UI Design</span
-                >
-
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >Responsive</span
-                >
-              </div>
-            </div>
-          </a>
-
-          <!-- Projet 2 -->
-          <a
-            href="pages/nova.html"
-            target="_blank"
-            class="project-card block rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-black card-hover"
-          >
-            <div class="relative h-80">
-              <img
-                src="assets/img/nova.png"
-                alt="Plateforme de réservation"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-
-              <!-- IMPORTANT : l’overlay ne doit pas bloquer le clic -->
-              <div class="image-overlay pointer-events-none"></div>
-
-              <div class="absolute bottom-6 left-6 right-6 z-10">
-                <div class="flex justify-between items-end">
-                  <div>
-                    <h3 class="text-xl font-bold text-light">
-                      Nova Stratégie — Cabinet de conseil
-                    </h3>
-                    <p class="text-gray-300">
-                      Site vitrine professionnel pour cabinet de conseil en stratégie
-                    </p>
-                  </div>
-
-                  <div class="text-accent text-3xl">
-                    <i class="fas fa-external-link-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="p-6">
-              <p class="text-gray-400 mb-4">
-                Site vitrine professionnel pour un cabinet de conseil en stratégie, avec
-                présentation des expertises, méthode, résultats et formulaire de prise de contact.
-              </p>
-
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >HTML</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >CSS</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >JavaScript</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >UX</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >Formulaire</span
-                >
-              </div>
-            </div>
-          </a>
-
-          <!-- Projet 3 -->
-          <a
-            href="pages/flowly.html"
-            target="_blank"
-            class="project-card block rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-black card-hover"
-          >
-            <div class="relative h-80">
-              <img
-                src="assets/img/flowly.png"
-                alt="Plateforme de réservation"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-
-              <!-- IMPORTANT : l’overlay ne doit pas bloquer le clic -->
-              <div class="image-overlay pointer-events-none"></div>
-
-              <div class="absolute bottom-6 left-6 right-6 z-10">
-                <div class="flex justify-between items-end">
-                  <div>
-                    <h3 class="text-xl font-bold text-light">Flowly — Plateforme SaaS</h3>
-                    <p class="text-gray-300">
-                      Interface SaaS orientée performance et simplification des processus
-                    </p>
-                  </div>
-
-                  <div class="text-accent text-3xl">
-                    <i class="fas fa-external-link-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="p-6">
-              <p class="text-gray-400 mb-4">
-                Plateforme SaaS moderne dédiée à l’optimisation des processus digitaux. Interface
-                épurée, orientée performance, avec mise en avant des fonctionnalités, bénéfices
-                business et parcours de conversion clair.
-              </p>
-
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >JavaScript</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >UI Design</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >Responsive</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >Architecture</span
-                >
-              </div>
-            </div>
-          </a>
-
-          <!-- Projet 4 -->
-          <a
-            href="pages/pizza_italia_update.html"
-            target="_blank"
-            class="project-card block rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-black card-hover"
-          >
-            <div class="relative h-80">
-              <img
-                src="assets/img/pizza_italia.png"
-                alt="Plateforme de réservation"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-
-              <!-- IMPORTANT : l’overlay ne doit pas bloquer le clic -->
-              <div class="image-overlay pointer-events-none"></div>
-
-              <div class="absolute bottom-6 left-6 right-6 z-10">
-                <div class="flex justify-between items-end">
-                  <div>
-                    <h3 class="text-xl font-bold text-light">Pizza Italia - Site vitrine</h3>
-                    <p class="text-gray-300">Site vitrine moderne pour commerce local</p>
-                  </div>
-
-                  <div class="text-accent text-3xl">
-                    <i class="fas fa-external-link-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="p-6">
-              <p class="text-gray-400 mb-4">
-                Création d’un site vitrine moderne pour une pizzeria locale, avec mise en avant de
-                la carte, des offres et des informations pratiques.
-              </p>
-
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >HTML</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >CSS</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >JavaScript</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >Responsive</span
-                >
-                <span
-                  class="bg-gray-800/20 border border-gray-700 px-3 py-1 rounded-lg text-sm text-gray-300"
-                  >Business local</span
-                >
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Compétences -->
-    <section id="skills" class="py-28 section">
-      <div class="container mx-auto px-6 max-w-5xl">
-        <div class="text-center max-w-3xl mx-auto mb-20">
-          <h2 class="text-3xl font-bold mb-4 text-light">
-            <span class="text-accent">//</span> Compétences techniques
-          </h2>
-          <p class="text-lg text-gray-400">
-            Expertise en développement couvrant l'ensemble du cycle de création
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <!-- Colonne 1 -->
-          <div>
-            <div class="mb-10">
-              <h3 class="text-xl font-bold text-light mb-6 flex items-center">
-                <i class="fas fa-laptop-code text-accent mr-3"></i> Front-end
-              </h3>
-              <div class="flex flex-wrap gap-3">
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">HTML5 / CSS3</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">JavaScript</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">React.js</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light"
-                  >Bases en intégration front-end</span
-                >
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">Responsive Design</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 class="text-xl font-bold text-light mb-6 flex items-center">
-                <i class="fas fa-mobile-alt text-accent mr-3"></i> Design & UX
-              </h3>
-              <div class="flex flex-wrap gap-3">
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">UI Basics</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">UX Notions</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light"
-                  >Lecture de maquettes</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Colonne 2 -->
-          <div>
-            <div class="mb-10">
-              <h3 class="text-xl font-bold text-light mb-6 flex items-center">
-                <i class="fas fa-server text-accent mr-3"></i> Back-end
-              </h3>
-              <div class="flex flex-wrap gap-3">
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">Node.js</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">API REST</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">PHP</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">SQL</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">MongoDB</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">Authentification</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 class="text-xl font-bold text-light mb-6 flex items-center">
-                <i class="fas fa-tools text-accent mr-3"></i> Outils & Méthodes
-              </h3>
-              <div class="flex flex-wrap gap-3">
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">Git & GitHub</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">VScode</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light">Tests & Débogage</span>
-                <span class="skill-badge px-4 py-2 rounded-lg text-light"
-                  >Outils assistés par IA</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="py-28 bg-darker section">
-      <div class="container mx-auto px-6 max-w-4xl">
-        <div class="text-center mb-20">
-          <h2 class="text-3xl font-bold mb-4 text-light">
-            <span class="text-accent">//</span> Contact
-          </h2>
-          <p class="text-lg text-gray-400 max-w-2xl mx-auto">
-            Intéressé par mon profil ? Contactez-moi pour discuter d'opportunités d'alternance ou de
-            collaboration.
-          </p>
-        </div>
-
-        <div
-          class="bg-gradient-to-br from-gray-900 to-darker border border-gray-800 rounded-2xl overflow-hidden"
-        >
-          <div class="p-10">
-            <div class="mb-8">
-              <h3 class="text-xl font-bold text-light mb-6">Disponibilité</h3>
-              <p class="text-gray-400">
-                Actuellement disponible pour une alternance à partir de septembre 2026. Ouvert aux
-                opportunités sur Paris et région parisienne.
-              </p>
-            </div>
-
-            <div class="space-y-4">
-              <a
-                href="mailto:willem.concy97x@gmail.com"
-                class="contact-item flex items-center p-4 rounded-lg"
-              >
-                <div class="text-accent text-xl mr-4">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div>
-                  <div class="text-gray-400">Email</div>
-                  <div class="text-light font-medium">willem.concy97x@gmail.com</div>
-                </div>
-                <div class="ml-auto text-gray-500">
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-              </a>
-
-              <a
-                href="https://github.com/Wiwil97x"
-                target="_blank"
-                class="contact-item flex items-center p-4 rounded-lg"
-              >
-                <div class="text-accent text-xl mr-4">
-                  <i class="fab fa-github"></i>
-                </div>
-                <div>
-                  <div class="text-gray-400">GitHub</div>
-                  <div class="text-light font-medium">github.com/Wiwil97x</div>
-                </div>
-                <div class="ml-auto text-gray-500">
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/willem-marchety-concy/"
-                target="_blank"
-                class="contact-item flex items-center p-4 rounded-lg"
-              >
-                <div class="text-accent text-xl mr-4">
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
-                <div>
-                  <div class="text-gray-400">LinkedIn</div>
-                  <div class="text-light font-medium">linkedin.com/in/willem-marchety-concy</div>
-                </div>
-                <div class="ml-auto text-gray-500">
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pied de page -->
-    <footer class="bg-darker border-t border-gray-800 py-10">
-      <div class="container mx-auto px-6 text-center">
-        <div class="text-xl font-bold text-accent mb-2">Willem MARCHETY-CONCY</div>
-        <p class="text-gray-500">Développeur Web Junior - Recherche d'alternance</p>
-
-        <div class="flex justify-center space-x-6 mt-6">
-          <a
-            href="https://github.com/Wiwil97x"
-            target="_blank"
-            class="text-gray-500 hover:text-accent transition"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/willem-marchety-concy/"
-            target="_blank"
-            class="text-gray-500 hover:text-accent transition"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-
-        <div class="mt-8 text-gray-600 text-sm">
-          &copy; 2026 Willem MARCHETY-CONCY. Tous droits réservés.
-        </div>
-      </div>
-    </footer>
-
-    <script src="js/main.js" defer></script>
-  </body>
+  <script src="js/main.js"></script>
+</body>
 </html>

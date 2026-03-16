@@ -1,0 +1,648 @@
+/* =============================================================
+   style.css
+   Sections:
+   1.  Variables & Reset
+   2.  Base & Typography
+   3.  Utilities
+   4.  Navigation
+   5.  Hero
+   6.  Projects Grid
+   7.  About & Skills
+   8.  Contact
+   9.  Footer
+   10. Project Detail Pages
+   11. Responsive — Tablet (≤ 768px)
+   12. Responsive — Mobile (≤ 480px)
+   ============================================================= */
+
+/* ─── 1. Variables & Reset ─────────────────────────────────── */
+
+:root {
+  --bg:             #0f0f0f;
+  --surface:        #151515;
+  --border:         #1e1e1e;
+  --border-hover:   #2a2a2a;
+  --text-primary:   #ffffff;
+  --text-secondary: #888888;
+  --text-muted:     #444444;
+  --accent:         #a78bfa;
+  --accent-small:   #c4b5fd;
+  --accent-on-dark: #0f0f0f;
+
+  --radius-card: 6px;
+  --radius-btn:  2px;
+
+  --transition: 0.2s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ─── 2. Base & Typography ─────────────────────────────────── */
+
+h1, h2, h3 {
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-small);
+  margin-bottom: 0.5rem;
+}
+
+.section-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── 3. Utilities ─────────────────────────────────────────── */
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ─── 4. Navigation ────────────────────────────────────────── */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-logo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.nav-logo:hover {
+  color: var(--accent-small);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-link--active {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-link--cta {
+  border: 1px solid var(--accent);
+  color: var(--accent-small);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-btn);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.nav-link--cta:hover {
+  background-color: var(--accent);
+  color: var(--accent-on-dark);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-secondary);
+  border-radius: 2px;
+  transition: background-color var(--transition);
+}
+
+.nav-toggle:hover span {
+  background-color: var(--text-primary);
+}
+
+/* Mobile nav open state */
+.nav-links--open {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  gap: 1rem;
+  z-index: 99;
+}
+
+/* ─── 5. Hero ──────────────────────────────────────────────── */
+
+.hero {
+  border-bottom: 1px solid var(--border);
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: stretch;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 0;
+}
+
+.hero-content {
+  flex: 1;
+  padding-bottom: 3rem;
+}
+
+.hero-tag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-small);
+  margin-bottom: 1rem;
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-btn);
+  transition: opacity var(--transition), background-color var(--transition), color var(--transition), border-color var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--accent-on-dark);
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  border: 1px solid #333;
+  color: var(--text-secondary);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent);
+  color: var(--accent-on-dark);
+  border-color: var(--accent);
+}
+
+/* Hero photo column */
+.hero-photo-col {
+  width: 160px;
+  flex-shrink: 0;
+  align-self: stretch;
+  background-color: var(--surface);
+  position: relative;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-photo-col::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(167, 139, 250, 0.06);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Mobile circular crop (shown only on mobile) */
+.hero-photo-mobile {
+  display: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  margin-bottom: 1rem;
+}
+
+/* ─── 6. Projects Grid ─────────────────────────────────────── */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.project-card {
+  display: block;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 24px rgba(167, 139, 250, 0.08);
+}
+
+.project-card-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background-color: var(--border); /* fallback while image loads */
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.project-card-body {
+  padding: 1.25rem;
+  padding-top: 0;
+}
+
+.project-label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+.project-label--client {
+  color: var(--accent-small);
+}
+
+.project-label--perso {
+  color: var(--text-muted);
+}
+
+.project-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.project-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.875rem;
+}
+
+/* Tags (shared between project cards and skills section) */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid var(--border-hover);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-btn);
+}
+
+/* 5th card: center in its own row */
+.project-card--last {
+  grid-column: span 2;
+  justify-self: center;
+  width: 50%;
+}
+
+/* ─── 7. About & Skills ────────────────────────────────────── */
+
+.about-skills-inner {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.about {
+  flex: 1;
+}
+
+.about-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.skills {
+  flex: 1;
+}
+
+.skill-group {
+  margin-bottom: 1.5rem;
+}
+
+.skill-group-label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.tag-notions {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  margin-left: 0.25rem;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+/* ─── 8. Contact ───────────────────────────────────────────── */
+
+.contact-inner {
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.contact-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.contact-cta {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.contact-link {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.contact-link:hover {
+  color: var(--accent-small);
+  text-decoration: underline;
+}
+
+/* ─── 9. Footer ────────────────────────────────────────────── */
+
+.footer {
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+}
+
+.footer-copy,
+.footer-tech {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ─── 10. Project Detail Pages ─────────────────────────────── */
+
+.project-detail {
+  padding: 2rem 0 4rem;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--accent-small);
+  margin-bottom: 2rem;
+  transition: color var(--transition);
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.detail-header {
+  margin-bottom: 2.5rem;
+}
+
+.detail-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  margin: 0.5rem 0 0.5rem;
+}
+
+.detail-tagline {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.detail-screenshot {
+  width: 100%;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+  background-color: var(--surface);
+}
+
+.detail-body {
+  margin: 2.5rem 0;
+}
+
+.detail-body h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 1.75rem 0 0.6rem;
+}
+
+.detail-body h2:first-child {
+  margin-top: 0;
+}
+
+.detail-body p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.detail-tech {
+  margin-bottom: 2rem;
+}
+
+.detail-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.detail-nav {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+.detail-nav-prev,
+.detail-nav-next {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.detail-nav-prev:hover,
+.detail-nav-next:hover {
+  color: var(--accent-small);
+}
+
+.detail-nav-prev:empty,
+.detail-nav-next:empty {
+  visibility: hidden;
+}
+
+/* ─── 11. Responsive — Tablet (≤ 768px) ───────────────────── */
+@media (max-width: 768px) {
+  .hero-photo-col { width: 120px; }
+  .about-skills-inner { flex-direction: column; gap: 2.5rem; }
+  .project-card--last { grid-column: span 2; width: 100%; justify-self: stretch; }
+}
+
+/* ─── 12. Responsive — Mobile (≤ 480px) ───────────────────── */
+@media (max-width: 480px) {
+  .container { padding: 0 1.25rem; }
+  .nav-inner { padding: 0 1.25rem; }
+  .nav-toggle { display: flex; }
+  .nav-links { display: none; }
+  .hero-inner { flex-direction: column; align-items: flex-start; padding-top: 2rem; padding-bottom: 2rem; gap: 1.25rem; }
+  .hero-photo-col { display: none; }
+  .hero-photo-mobile { display: block; }
+  .hero-content { padding-bottom: 0; }
+  .hero-name { font-size: 2.2rem; } /* override clamp floor — 2.5rem is still too large at 480px */
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card--last { grid-column: span 1; width: 100%; justify-self: stretch; }
+  .contact-links { gap: 1rem; }
+  .footer-inner { flex-direction: column; height: auto; gap: 0.5rem; padding: 1rem 0; text-align: center; }
+  .detail-links { flex-direction: column; }
+  .detail-nav { flex-direction: column; gap: 0.75rem; }
+  .nav-links--open { padding: 1rem 1.25rem; }
+}
