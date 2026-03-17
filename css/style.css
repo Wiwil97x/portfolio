@@ -296,7 +296,7 @@ h1, h2, h3 {
   width: 220px;
   aspect-ratio: 3 / 4;
   flex-shrink: 0;
-  align-self: flex-end;
+  align-self: flex-start;
   background-color: var(--surface);
   position: relative;
   border-radius: 8px 8px 0 0;
