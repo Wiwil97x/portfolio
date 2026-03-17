@@ -293,14 +293,15 @@ h1, h2, h3 {
 
 /* Hero photo column */
 .hero-photo-col {
-  width: 220px;
-  aspect-ratio: 3 / 4;
+  width: 160px;
   flex-shrink: 0;
-  align-self: flex-start;
+  align-self: stretch;
   background-color: var(--surface);
   position: relative;
   border-radius: 8px 8px 0 0;
   overflow: hidden;
+  display: flex;
+  align-items: flex-end;
 }
 
 .hero-photo-col::after {
@@ -313,8 +314,6 @@ h1, h2, h3 {
 }
 
 .hero-photo {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -623,7 +622,7 @@ h1, h2, h3 {
 
 /* ─── 11. Responsive — Tablet (≤ 768px) ───────────────────── */
 @media (max-width: 768px) {
-  .hero-photo-col { width: 160px; aspect-ratio: 3 / 4; }
+  .hero-photo-col { width: 120px; }
   .about-skills-inner { flex-direction: column; gap: 2.5rem; }
   .project-card--last { grid-column: span 2; width: 100%; justify-self: stretch; }
 }
