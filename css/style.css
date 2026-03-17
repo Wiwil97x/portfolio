@@ -293,7 +293,7 @@ h1, h2, h3 {
 
 /* Hero photo column */
 .hero-photo-col {
-  width: 240px;
+  width: 260px;
   flex-shrink: 0;
   align-self: stretch;
   background-color: var(--surface);
