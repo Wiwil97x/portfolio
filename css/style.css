@@ -293,7 +293,7 @@ h1, h2, h3 {
 
 /* Hero photo column */
 .hero-photo-col {
-  width: 160px;
+  width: 220px;
   flex-shrink: 0;
   align-self: stretch;
   background-color: var(--surface);
@@ -624,7 +624,7 @@ h1, h2, h3 {
 
 /* ─── 11. Responsive — Tablet (≤ 768px) ───────────────────── */
 @media (max-width: 768px) {
-  .hero-photo-col { width: 120px; }
+  .hero-photo-col { width: 160px; }
   .about-skills-inner { flex-direction: column; gap: 2.5rem; }
   .project-card--last { grid-column: span 2; width: 100%; justify-self: stretch; }
 }
