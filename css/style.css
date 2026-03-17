@@ -556,11 +556,27 @@ h1, h2, h3 {
   color: var(--text-secondary);
 }
 
-.detail-screenshot {
-  width: 100%;
-  border-radius: var(--radius-card);
+.screenshots-wrapper {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.screenshot-desktop {
+  flex: 1;
+  border-radius: 10px;
   border: 1px solid var(--border);
-  margin-bottom: 1rem;
+  display: block;
+  background-color: var(--surface);
+}
+
+.screenshot-mobile {
+  width: 130px;
+  flex-shrink: 0;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  display: block;
   background-color: var(--surface);
 }
 
