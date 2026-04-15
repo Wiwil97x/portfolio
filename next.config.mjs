@@ -3,6 +3,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
   output: 'export',
+  trailingSlash: true,
   basePath: isProd ? '/portfolio' : '',
   env: {
     NEXT_PUBLIC_BASE_PATH: isProd ? '/portfolio' : '',
