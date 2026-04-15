@@ -24,7 +24,7 @@ const projects: Project[] = [
     description: 'Site vitrine pour une entreprise de transport',
     stack: ['HTML', 'CSS', 'JS'],
     type: 'CLIENT RÉEL',
-    coverSrc: '/assets/projects/bns-transport/coverV2.png',
+    coverSrc: '/assets/projects/bns-transport/bns.png',
     coverAlt: 'Aperçu du site BNS Transport',
   },
   {
@@ -42,7 +42,7 @@ const projects: Project[] = [
     description: 'Mon studio freelance de création de sites vitrines professionnels',
     stack: ['HTML', 'CSS'],
     type: 'PROJET PRO',
-    coverSrc: '/assets/projects/roven/cover.jpg',
+    coverSrc: '/assets/projects/roven/roven.png',
     coverAlt: 'Aperçu du site Roven Studio',
   },
   {

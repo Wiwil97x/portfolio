@@ -22,8 +22,8 @@ export const projects: ProjectData[] = [
     title: 'BNS Transport',
     tagline: 'Site vitrine pour une entreprise de transport',
     type: 'CLIENT RÉEL',
-    coverDesktop: '/assets/projects/bns-transport/cover.png',
-    coverMobile: '/assets/projects/bns-transport/cover-mobile.png',
+    coverDesktop: '/assets/projects/bns-transport/bns.png',
+    coverMobile: '/assets/projects/bns-transport/bns-mobile.png',
     contexte:
       "BNS Transport est une société de transport routier de marchandises basée en région parisienne. L'entreprise n'avait aucune présence en ligne et cherchait un site vitrine pour valoriser ses services et faciliter le recrutement de conducteurs.",
     role: "J'ai réalisé l'intégralité du projet : conception graphique, intégration HTML/CSS/JS et mise en ligne. Le site est entièrement responsive et optimisé pour les appareils mobiles.",
@@ -55,8 +55,8 @@ export const projects: ProjectData[] = [
     title: 'Roven',
     tagline: 'Mon studio freelance de création de sites vitrines professionnels',
     type: 'PROJET PRO',
-    coverDesktop: '/assets/projects/roven/cover-v2.png',
-    coverMobile: '/assets/projects/roven/cover-mobile.png',
+    coverDesktop: '/assets/projects/roven/roven.png',
+    coverMobile: '/assets/projects/roven/roven-mobile.png',
     contexte:
       "Roven est mon studio freelance spécialisé dans la création de sites vitrines professionnels. J'ai créé ce site pour présenter mes services, mon approche et attirer mes premiers clients.",
     role: "Conception et développement complet : identité visuelle, design UI et intégration HTML/CSS. Le site est en ligne sur rovenhq.com.",
