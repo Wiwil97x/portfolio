@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
 
 const ease = [0.16, 1, 0.3, 1] as const
+const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
 export default function About() {
   const ref = useRef(null)
@@ -78,7 +79,7 @@ export default function About() {
         >
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/[0.08]">
             <Image
-              src="/assets/img/photo.jpg"
+              src={`${bp}/assets/img/photo.jpg`}
               alt="Photo de Willem Marchety-Concy"
               fill
               className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"

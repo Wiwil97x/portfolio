@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
 
 const ease = [0.16, 1, 0.3, 1] as const
+const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
 interface Project {
   slug: string
@@ -99,7 +100,7 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Cover */}
       <div className="relative aspect-video overflow-hidden">
         <Image
-          src={project.coverSrc}
+          src={`${bp}${project.coverSrc}`}
           alt={project.coverAlt}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"

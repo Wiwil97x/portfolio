@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getProject, projects, type ProjectType } from '@/lib/projects'
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 interface Props {
   params: { slug: string }
 }
@@ -72,7 +74,7 @@ export default function ProjectPage({ params }: Props) {
           {/* Desktop screenshot — large */}
           <div className="flex-1 rounded-xl overflow-hidden border border-white/[0.06] bg-[#111111]">
             <Image
-              src={project.coverDesktop}
+              src={`${bp}${project.coverDesktop}`}
               alt={`Capture d'écran de ${project.title}`}
               width={1200}
               height={750}
@@ -83,7 +85,7 @@ export default function ProjectPage({ params }: Props) {
           {/* Mobile screenshot — narrow */}
           <div className="w-[22%] shrink-0 rounded-xl overflow-hidden border border-white/[0.06] bg-[#111111] self-stretch flex items-center">
             <Image
-              src={project.coverMobile}
+              src={`${bp}${project.coverMobile}`}
               alt={`Capture mobile de ${project.title}`}
               width={390}
               height={844}
