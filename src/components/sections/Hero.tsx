@@ -47,8 +47,8 @@ export default function Hero() {
           className="mb-10 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.10] bg-white/[0.04] backdrop-blur-sm"
         >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-400" />
           </span>
           <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">
             Disponible en alternance&nbsp;&middot;&nbsp;Sep. 2026&nbsp;&middot;&nbsp;Paris
@@ -92,7 +92,7 @@ export default function Hero() {
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
           transition={{ duration: 0.8, ease, delay: 0.7 }}
-          className="mt-8 w-full max-w-xs h-px bg-gradient-to-r from-green-400/40 to-transparent origin-left"
+          className="mt-8 w-full max-w-xs h-px bg-gradient-to-r from-blue-400/40 to-transparent origin-left"
         />
 
         {/* CTAs */}
@@ -139,7 +139,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-px h-6 bg-green-400/40"
+          className="w-px h-6 bg-blue-400/40"
         />
       </motion.div>
     </section>

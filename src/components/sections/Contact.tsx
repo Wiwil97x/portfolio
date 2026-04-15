@@ -34,7 +34,7 @@ export default function Contact() {
           transition={{ duration: 0.5, ease }}
           className="flex items-center justify-center gap-3 mb-4"
         >
-          <span className="font-mono text-xs text-green-500 tabular-nums">04</span>
+          <span className="font-mono text-xs text-blue-400 tabular-nums">04</span>
           <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">
             Contact
           </span>
@@ -107,7 +107,7 @@ export default function Contact() {
               href="https://github.com/Wiwil97x"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-xs text-zinc-500 hover:text-green-400 transition-colors duration-200"
+              className="font-mono text-xs text-zinc-500 hover:text-blue-400 transition-colors duration-200"
             >
               GitHub
             </a>
@@ -115,7 +115,7 @@ export default function Contact() {
               href="https://linkedin.com/in/willem-marchety-concy"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-xs text-zinc-500 hover:text-green-400 transition-colors duration-200"
+              className="font-mono text-xs text-zinc-500 hover:text-blue-400 transition-colors duration-200"
             >
               LinkedIn
             </a>

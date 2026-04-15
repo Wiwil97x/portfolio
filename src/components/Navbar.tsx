@@ -68,7 +68,7 @@ export default function Navbar() {
               <li key={link.anchor}>
                 <button
                   onClick={() => handleNavClick(link.anchor)}
-                  className="text-sm text-zinc-400 hover:text-green-400 transition-colors duration-200"
+                  className="text-sm text-zinc-400 hover:text-blue-400 transition-colors duration-200"
                 >
                   {link.label}
                 </button>
@@ -133,7 +133,7 @@ export default function Navbar() {
                   >
                     <button
                       onClick={() => handleNavClick(link.anchor)}
-                      className="font-syne font-bold text-4xl text-white hover:text-green-400 transition-colors block"
+                      className="font-syne font-bold text-4xl text-white hover:text-blue-400 transition-colors block"
                     >
                       {link.label}
                     </button>

@@ -24,7 +24,7 @@ export default function About() {
             transition={{ duration: 0.5, ease }}
             className="flex items-center gap-3 mb-4"
           >
-            <span className="font-mono text-xs text-green-500 tabular-nums">02</span>
+            <span className="font-mono text-xs text-blue-400 tabular-nums">02</span>
             <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">
               À propos
             </span>

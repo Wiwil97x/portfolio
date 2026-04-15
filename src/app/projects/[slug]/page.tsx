@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const typeBadge: Record<ProjectType, string> = {
-  'CLIENT RÉEL': 'bg-green-950 text-green-400',
+  'CLIENT RÉEL': 'bg-blue-950 text-blue-400',
   'PROJET PRO': 'bg-blue-950 text-blue-400',
   'PROJET PERSONNEL': 'bg-zinc-800 text-zinc-400',
 }
@@ -42,7 +42,7 @@ export default function ProjectPage({ params }: Props) {
         {/* Back link */}
         <Link
           href="/#projets"
-          className="inline-flex items-center gap-2 font-mono text-xs text-zinc-500 hover:text-green-400 transition-colors duration-200 mb-12 group"
+          className="inline-flex items-center gap-2 font-mono text-xs text-zinc-500 hover:text-blue-400 transition-colors duration-200 mb-12 group"
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path
@@ -144,7 +144,7 @@ export default function ProjectPage({ params }: Props) {
           {project.prev ? (
             <Link
               href={`/projects/${project.prev.slug}`}
-              className="flex items-center gap-2 font-mono text-xs text-zinc-500 hover:text-green-400 transition-colors duration-200"
+              className="flex items-center gap-2 font-mono text-xs text-zinc-500 hover:text-blue-400 transition-colors duration-200"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M13 7H1M7 13l-6-6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -157,7 +157,7 @@ export default function ProjectPage({ params }: Props) {
           {project.next ? (
             <Link
               href={`/projects/${project.next.slug}`}
-              className="flex items-center gap-2 font-mono text-xs text-zinc-500 hover:text-green-400 transition-colors duration-200"
+              className="flex items-center gap-2 font-mono text-xs text-zinc-500 hover:text-blue-400 transition-colors duration-200"
             >
               {project.next.title}
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">

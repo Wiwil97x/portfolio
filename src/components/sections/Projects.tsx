@@ -66,7 +66,7 @@ const projects: Project[] = [
 ]
 
 const typeBadge: Record<Project['type'], string> = {
-  'CLIENT RÉEL': 'bg-green-950 text-green-400',
+  'CLIENT RÉEL': 'bg-blue-950 text-blue-400',
   'PROJET PRO': 'bg-blue-950 text-blue-400',
   'PROJET PERSONNEL': 'bg-zinc-800 text-zinc-400',
 }
@@ -124,13 +124,13 @@ function ProjectCard({ project }: { project: Project }) {
           </div>
 
           {/* Arrow — appears on hover */}
-          <div className="shrink-0 mt-1 w-8 h-8 rounded-full border border-green-400/20 bg-green-400/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 translate-x-2 group-hover:translate-x-0">
+          <div className="shrink-0 mt-1 w-8 h-8 rounded-full border border-blue-400/20 bg-blue-400/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 translate-x-2 group-hover:translate-x-0">
             <svg
               width="14"
               height="14"
               viewBox="0 0 14 14"
               fill="none"
-              className="text-green-400"
+              className="text-blue-400"
             >
               <path
                 d="M1 7h12M7 1l6 6-6 6"
@@ -177,7 +177,7 @@ export default function Projects() {
           transition={{ duration: 0.5, ease }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="font-mono text-xs text-green-500 tabular-nums">01</span>
+          <span className="font-mono text-xs text-blue-400 tabular-nums">01</span>
           <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">
             Projets
           </span>

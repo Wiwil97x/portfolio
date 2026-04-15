@@ -87,7 +87,7 @@ export default function Skills() {
           transition={{ duration: 0.5, ease }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="font-mono text-xs text-green-500 tabular-nums">03</span>
+          <span className="font-mono text-xs text-blue-400 tabular-nums">03</span>
           <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">
             Compétences
           </span>
@@ -120,7 +120,7 @@ export default function Skills() {
               }}
               className="p-6 rounded-xl border border-white/[0.06] bg-[#111111] flex flex-col gap-5"
             >
-              <div className="text-green-400">{cat.icon}</div>
+              <div className="text-blue-400">{cat.icon}</div>
 
               <h3 className="font-syne font-bold text-lg text-white">{cat.title}</h3>
 
