@@ -27,7 +27,6 @@ const projects: Project[] = [
     type: 'AGENCE EN ACTIVITÉ',
     coverSrc: '/assets/projects/roven/roven.png',
     coverAlt: 'Aperçu du site ROVEN',
-    externalUrl: 'https://rovenhq.com',
   },
   {
     slug: 'roven-reservation',
@@ -37,7 +36,15 @@ const projects: Project[] = [
     type: 'SaaS EN PRODUCTION',
     coverSrc: '/assets/projects/roven/roven.png',
     coverAlt: 'Aperçu de ROVEN Réservation',
-    externalUrl: 'https://reservation.rovenhq.com',
+  },
+  {
+    slug: 'aren',
+    title: 'Aren',
+    description: 'Site vitrine client — entreprise locale',
+    stack: ['HTML', 'CSS', 'JS'],
+    type: 'CLIENT RÉEL',
+    coverSrc: '/assets/projects/aren/arenag.png',
+    coverAlt: 'Aperçu du site Aren',
   },
   {
     slug: 'bns-transport',
