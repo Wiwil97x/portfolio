@@ -34,7 +34,7 @@ const projects: Project[] = [
     description: 'Application SaaS de réservation en ligne, développée et déployée en production.',
     stack: ['Next.js', 'Vercel'],
     type: 'SaaS EN PRODUCTION',
-    coverSrc: '/assets/projects/roven/roven.png',
+    coverSrc: '/assets/projects/roven_reservation/roven_reservation.png',
     coverAlt: 'Aperçu de ROVEN Réservation',
   },
   {

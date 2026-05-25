@@ -39,8 +39,8 @@ export const projects: ProjectData[] = [
     title: 'ROVEN Réservation',
     tagline: 'Application SaaS de réservation en ligne, développée et déployée en production.',
     type: 'SaaS EN PRODUCTION',
-    coverDesktop: '/assets/projects/roven/roven.png',
-    coverMobile: '/assets/projects/roven/roven-mobile.png',
+    coverDesktop: '/assets/projects/roven_reservation/roven_reservation.png',
+    coverMobile: '/assets/projects/roven_reservation/roven_reservation_mobile.png',
     contexte:
       "ROVEN Réservation est une application SaaS de prise de rendez-vous en ligne, conçue pour les clients de l'agence ROVEN. Déployée en production sur Vercel, elle permet aux utilisateurs de réserver des créneaux directement depuis le site de leurs prestataires.",
     role: "Développement full stack de l'application : architecture Next.js, interface client, logique de réservation et déploiement en production sur Vercel.",
