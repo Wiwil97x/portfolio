@@ -24,6 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const typeBadge: Record<ProjectType, string> = {
+  'AGENCE EN ACTIVITÉ': 'bg-emerald-950 text-emerald-400',
+  'SaaS EN PRODUCTION': 'bg-violet-950 text-violet-400',
   'CLIENT RÉEL': 'bg-blue-950 text-blue-400',
   'PROJET PRO': 'bg-blue-950 text-blue-400',
   'PROJET PERSONNEL': 'bg-zinc-800 text-zinc-400',

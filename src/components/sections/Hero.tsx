@@ -87,6 +87,20 @@ export default function Hero() {
           Développeur Web &amp; Designer
         </motion.p>
 
+        {/* AI workflow badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, ease, delay: 0.65 }}
+          className="mt-5 inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full border border-blue-400/15 bg-blue-400/[0.04]"
+        >
+          <span className="font-mono text-[10px] uppercase tracking-widest text-blue-400 shrink-0">AI</span>
+          <span className="w-px h-3 bg-white/10 shrink-0" />
+          <span className="font-inter text-xs text-zinc-500">
+            J&apos;intègre Claude Code et OpenAI Codex dans mon workflow quotidien : livraison d&apos;un site complet en 2&nbsp;à&nbsp;4 heures.
+          </span>
+        </motion.div>
+
         {/* Separator line */}
         <motion.div
           initial={{ scaleX: 0 }}

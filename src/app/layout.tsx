@@ -27,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Willem Marchety-Concy — Développeur Web & Designer',
   description:
-    'Portfolio de Willem Marchety-Concy, développeur web passionné par la création de sites modernes et performants. Disponible en alternance à Paris, septembre 2026.',
+    'Développeur web full stack spécialisé en intégration IA. Disponible en alternance à Paris, septembre 2026. Fondateur de ROVEN, micro-agence web martiniquaise.',
   keywords: ['développeur web', 'designer', 'portfolio', 'alternance', 'Paris', 'Next.js', 'React'],
   authors: [{ name: 'Willem Marchety-Concy' }],
   openGraph: {

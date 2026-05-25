@@ -12,12 +12,33 @@ interface Project {
   title: string
   description: string
   stack: string[]
-  type: 'CLIENT RÉEL' | 'PROJET PRO' | 'PROJET PERSONNEL'
+  type: 'CLIENT RÉEL' | 'PROJET PRO' | 'PROJET PERSONNEL' | 'AGENCE EN ACTIVITÉ' | 'SaaS EN PRODUCTION'
   coverSrc: string
   coverAlt: string
+  externalUrl?: string
 }
 
 const projects: Project[] = [
+  {
+    slug: 'roven',
+    title: 'ROVEN',
+    description: 'Micro-agence web en activité | Fondateur & dev full stack | 500€ CA | Clients actifs | Modèle WaaS (abonnement mensuel)',
+    stack: ['Next.js', 'HTML', 'CSS'],
+    type: 'AGENCE EN ACTIVITÉ',
+    coverSrc: '/assets/projects/roven/roven.png',
+    coverAlt: 'Aperçu du site ROVEN',
+    externalUrl: 'https://rovenhq.com',
+  },
+  {
+    slug: 'roven-reservation',
+    title: 'ROVEN Réservation',
+    description: 'Application SaaS de réservation en ligne, développée et déployée en production.',
+    stack: ['Next.js', 'Vercel'],
+    type: 'SaaS EN PRODUCTION',
+    coverSrc: '/assets/projects/roven/roven.png',
+    coverAlt: 'Aperçu de ROVEN Réservation',
+    externalUrl: 'https://reservation.rovenhq.com',
+  },
   {
     slug: 'bns-transport',
     title: 'BNS Transport',
@@ -37,18 +58,9 @@ const projects: Project[] = [
     coverAlt: 'Aperçu du site Pizza Italia',
   },
   {
-    slug: 'roven',
-    title: 'Roven',
-    description: 'Mon studio freelance de création de sites vitrines professionnels',
-    stack: ['HTML', 'CSS'],
-    type: 'PROJET PRO',
-    coverSrc: '/assets/projects/roven/roven.png',
-    coverAlt: 'Aperçu du site Roven Studio',
-  },
-  {
     slug: 'nova-strategie',
     title: 'Nova Stratégie',
-    description: 'Design UI — agence digitale fictive',
+    description: 'Design UI : agence digitale fictive',
     stack: ['HTML', 'CSS', 'JS'],
     type: 'PROJET PERSONNEL',
     coverSrc: '/assets/projects/nova-strategie/cover.jpg',
@@ -57,7 +69,7 @@ const projects: Project[] = [
   {
     slug: 'flowly',
     title: 'Flowly',
-    description: 'Design UI — application SaaS fictive',
+    description: 'Design UI : application SaaS fictive',
     stack: ['HTML', 'CSS', 'JS'],
     type: 'PROJET PERSONNEL',
     coverSrc: '/assets/projects/flowly/cover.jpg',
@@ -66,6 +78,8 @@ const projects: Project[] = [
 ]
 
 const typeBadge: Record<Project['type'], string> = {
+  'AGENCE EN ACTIVITÉ': 'bg-emerald-950 text-emerald-400',
+  'SaaS EN PRODUCTION': 'bg-violet-950 text-violet-400',
   'CLIENT RÉEL': 'bg-blue-950 text-blue-400',
   'PROJET PRO': 'bg-blue-950 text-blue-400',
   'PROJET PERSONNEL': 'bg-zinc-800 text-zinc-400',
@@ -87,7 +101,9 @@ const cardVariants = {
 function ProjectCard({ project }: { project: Project }) {
   return (
     <motion.a
-      href={`/projects/${project.slug}`}
+      href={project.externalUrl ?? `/projects/${project.slug}`}
+      target={project.externalUrl ? '_blank' : undefined}
+      rel={project.externalUrl ? 'noopener noreferrer' : undefined}
       variants={cardVariants}
       whileHover={{
         scale: 1.02,

@@ -1,4 +1,4 @@
-export type ProjectType = 'CLIENT RÉEL' | 'PROJET PRO' | 'PROJET PERSONNEL'
+export type ProjectType = 'CLIENT RÉEL' | 'PROJET PRO' | 'PROJET PERSONNEL' | 'AGENCE EN ACTIVITÉ' | 'SaaS EN PRODUCTION'
 
 export interface ProjectData {
   slug: string
@@ -52,17 +52,17 @@ export const projects: ProjectData[] = [
   },
   {
     slug: 'roven',
-    title: 'Roven',
-    tagline: 'Mon studio freelance de création de sites vitrines professionnels',
-    type: 'PROJET PRO',
+    title: 'ROVEN',
+    tagline: 'Micro-agence web en activité | Fondateur & dev full stack | 500€ CA | Clients actifs | Modèle WaaS (abonnement mensuel)',
+    type: 'AGENCE EN ACTIVITÉ',
     coverDesktop: '/assets/projects/roven/roven.png',
     coverMobile: '/assets/projects/roven/roven-mobile.png',
     contexte:
-      "Roven est mon studio freelance spécialisé dans la création de sites vitrines professionnels. J'ai créé ce site pour présenter mes services, mon approche et attirer mes premiers clients.",
-    role: "Conception et développement complet : identité visuelle, design UI et intégration HTML/CSS. Le site est en ligne sur rovenhq.com.",
+      "ROVEN est une micro-agence web martiniquaise en activité, spécialisée dans la création de sites vitrines professionnels et d'applications web sur abonnement mensuel (modèle WaaS). L'agence compte des clients actifs et génère un chiffre d'affaires de 500€.",
+    role: "Fondateur et développeur full stack : conception de l'offre commerciale, identité visuelle, développement des sites clients et déploiement en production. Gestion de bout en bout des projets clients.",
     defis:
-      "L'enjeu était de créer une identité visuelle crédible et cohérente pour un studio de design, tout en maintenant un code propre et maintenable.",
-    stack: ['HTML', 'CSS'],
+      "Construire un modèle économique viable en WaaS (Web as a Service) sur un marché martiniquais, avec acquisition de premiers clients réels et mise en place d'une offre d'abonnement mensuel récurrent.",
+    stack: ['Next.js', 'HTML', 'CSS'],
     siteUrl: 'https://rovenhq.com/',
     prev: { slug: 'pizza-italia', title: 'Pizza Italia' },
     next: { slug: 'nova-strategie', title: 'Nova Stratégie' },
