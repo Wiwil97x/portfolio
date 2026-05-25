@@ -25,7 +25,7 @@ const categories: SkillCategory[] = [
       </svg>
     ),
     title: 'Front-end',
-    skills: ['HTML / CSS', 'JavaScript', 'React'],
+    skills: ['HTML / CSS', 'JavaScript', 'React', 'Next.js', 'TypeScript'],
   },
   {
     icon: (
@@ -39,23 +39,29 @@ const categories: SkillCategory[] = [
         />
       </svg>
     ),
-    title: 'Back-end',
-    skills: ['PHP', 'MySQL / SQL', 'REST API'],
+    title: 'Back-end & Outils',
+    skills: ['PHP', 'MySQL / SQL', 'REST API', 'Git / GitHub', 'Vercel', 'Figma'],
   },
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5" />
         <path
-          d="M12 2v3M12 19v3M2 12h3M19 12h3M5.636 5.636l2.121 2.121M16.243 16.243l2.121 2.121M16.243 7.757l-2.121 2.121M7.757 16.243l-2.121 2.121"
+          d="M12 3c-1.5 3-3 4.5-4.5 6S4 12 4 14a8 8 0 0016 0c0-2-1-3.5-2.5-5S13.5 6 12 3z"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9 17c0-1.5 1.5-3 3-3s3 1.5 3 3"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
         />
       </svg>
     ),
-    title: 'Outils',
-    skills: ['Git / GitHub', 'VSCode', 'Figma'],
+    title: 'IA & Workflow',
+    skills: ['Claude Code', 'Cursor', 'v0 by Vercel', 'OpenAI Codex', 'Prompting'],
   },
 ]
 
@@ -87,7 +93,7 @@ export default function Skills() {
           transition={{ duration: 0.5, ease }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="font-mono text-xs text-blue-400 tabular-nums">03</span>
+          <span className="font-mono text-xs text-blue-400 tabular-nums">04</span>
           <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">
             Compétences
           </span>
@@ -108,7 +114,7 @@ export default function Skills() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'show' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:grid-cols-3"
         >
           {categories.map((cat) => (
             <motion.div

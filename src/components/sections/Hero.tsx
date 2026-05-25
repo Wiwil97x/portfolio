@@ -84,7 +84,7 @@ export default function Hero() {
           animate={inView ? 'show' : 'hidden'}
           className="mt-6 text-xl text-zinc-500 font-inter"
         >
-          Développeur Web &amp; Designer
+          Développeur Full Stack&nbsp;&middot;&nbsp;Workflow IA
         </motion.p>
 
         {/* AI workflow badge */}

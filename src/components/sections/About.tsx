@@ -24,7 +24,7 @@ export default function About() {
             transition={{ duration: 0.5, ease }}
             className="flex items-center gap-3 mb-4"
           >
-            <span className="font-mono text-xs text-blue-400 tabular-nums">02</span>
+            <span className="font-mono text-xs text-blue-400 tabular-nums">03</span>
             <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">
               À propos
             </span>
@@ -48,15 +48,15 @@ export default function About() {
             className="space-y-4"
           >
             <p className="text-base text-zinc-400 font-inter leading-relaxed max-w-[60ch]">
-              Développeur web passionné par la création de sites modernes et performants.
-              Mon parcours s&apos;est construit sur des projets concrets&nbsp;: de la maquette à la mise
-              en ligne, avec une attention particulière portée à l&apos;expérience utilisateur et à
-              la qualité du code.
+              Je construis des sites web en combinant une maîtrise technique solide et des outils IA
+              intégrés à mon workflow quotidien. Résultat : des livrables concrets, rapides à
+              produire, sans compromis sur la qualité.
             </p>
             <p className="text-base text-zinc-400 font-inter leading-relaxed max-w-[60ch]">
-              J&apos;aborde chaque projet avec une double approche&nbsp;: un oeil orienté design pour
-              créer des interfaces claires et attractives, et une logique de développeur pour
-              produire un code propre, maintenable et structuré.
+              Fondateur de ROVEN, une micro-agence web martiniquaise en activité, j&apos;ai livré des
+              projets réels pour des clients réels. Je ne code pas à la main ce que l&apos;IA fait
+              mieux : ce temps économisé, je l&apos;investis dans la conception, la qualité et
+              l&apos;expérience utilisateur.
             </p>
           </motion.div>
 
