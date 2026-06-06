@@ -90,7 +90,7 @@ const cardVariants = {
 function ProjectCard({ project }: { project: Project }) {
   return (
     <motion.a
-      href={project.externalUrl ?? `${bp}/projects/${project.slug}`}
+      href={project.externalUrl ?? `${bp}/projects/${project.slug}/`}
       target={project.externalUrl ? '_blank' : undefined}
       rel={project.externalUrl ? 'noopener noreferrer' : undefined}
       variants={cardVariants}
