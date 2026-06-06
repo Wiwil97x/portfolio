@@ -36,7 +36,6 @@ const projects: Project[] = [
     type: 'SaaS EN PRODUCTION',
     coverSrc: '/assets/projects/swifo/swifo.png',
     coverAlt: 'Aperçu de Swifo',
-    externalUrl: 'https://swifo.app',
   },
   {
     slug: 'aren',
@@ -46,7 +45,6 @@ const projects: Project[] = [
     type: 'CLIENT RÉEL',
     coverSrc: '/assets/projects/aren/arenag.png',
     coverAlt: 'Aperçu du site Aren',
-    externalUrl: 'https://arenag.fr',
   },
   {
     slug: 'bns-transport',
